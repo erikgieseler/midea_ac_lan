@@ -1214,6 +1214,14 @@ MIDEA_DEVICES: dict[int, dict[str, dict[str, Any] | str]] = {
                 "icon": "mdi:fan-remove",
                 "options": "silent_modes",
             },
+            C3Attributes.status_silent_mode: {
+                "type": Platform.BINARY_SENSOR,
+                "has_entity_name": True,
+                "translation_key": "status_silent_mode",
+                "name": "Silent Mode status",
+                "icon": "mdi:fan-remove",
+                "device_class": BinarySensorDeviceClass.RUNNING,
+            },
             C3Attributes.tbh: {
                 "type": Platform.SWITCH,
                 "has_entity_name": True,
